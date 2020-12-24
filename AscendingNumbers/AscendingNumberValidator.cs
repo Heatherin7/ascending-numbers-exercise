@@ -9,8 +9,21 @@ namespace AscendingNumbers
 		/// otherwise return false.
 		/// </summary>
 		public bool IsAscending(int[] numbers)
-		{
-			throw new NotImplementedException();
+		{ 
+			if(numbers.Length == 0)
+      {
+				return false;
+      }
+
+			for (int num = 0; num < numbers.Length - 1; num++)
+      {
+				if (numbers[num] + 1 != numbers[num + 1])
+        {
+					return false;
+        }
+      }
+
+			return true;
 		}
 	}
 }
